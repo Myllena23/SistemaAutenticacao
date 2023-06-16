@@ -1,17 +1,27 @@
 package model;
 
+import java.util.UUID;
+
 public class Pessoa {
 
-    private Integer identificacao;
+    private UUID identificacao;
+
     private String nome;
     private String email;
     private String cpf;
 
-    public Integer getIdentificacao() {
+    public Pessoa(String nome, String email, String cpf) {
+        this.identificacao = UUID.randomUUID();
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+    }
+
+    public UUID getIdentificacao() {
         return identificacao;
     }
 
-    public void setIdentificacao(Integer identificacao) {
+    public void setIdentificacao(UUID identificacao) {
         this.identificacao = identificacao;
     }
 
