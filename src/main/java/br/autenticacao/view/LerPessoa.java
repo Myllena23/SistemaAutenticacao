@@ -1,6 +1,6 @@
-package view;
+package br.autenticacao.view;
 
-import model.Pessoa;
+import br.autenticacao.model.Pessoa;
 
 import java.util.Scanner;
 import java.util.UUID;
@@ -15,7 +15,6 @@ public class LerPessoa {
         String emailPessoa = in.nextLine();
         System.out.println("Digite o seu cpf: ");
         String cpfPessoa = in.nextLine();
-        System.out.println("UUID gerado: " + UUID.randomUUID());
         return new Pessoa(nomePessoa, emailPessoa, cpfPessoa);
     }
 
