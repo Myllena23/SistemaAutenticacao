@@ -1,4 +1,6 @@
-import controller.ManterPessoa;
+package br.autenticacao;
+
+import br.autenticacao.controller.ManterPessoa;
 
 public class Main {
 

@@ -1,7 +1,7 @@
-package controller;
+package br.autenticacao.controller;
 
-import model.Pessoa;
-import view.LerPessoa;
+import br.autenticacao.view.LerPessoa;
+import br.autenticacao.model.Pessoa;
 
 public class ManterPessoa {
 

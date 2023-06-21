@@ -1,4 +1,4 @@
-package model;
+package br.autenticacao.model;
 
 import java.util.UUID;
 
