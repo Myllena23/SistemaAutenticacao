@@ -1,7 +1,14 @@
 package br.autenticacao.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.util.UUID;
 
+@Data
+@ToString
+@NoArgsConstructor
 public class Pessoa {
 
     private UUID identificacao;
@@ -17,35 +24,4 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public UUID getIdentificacao() {
-        return identificacao;
-    }
-
-    public void setIdentificacao(UUID identificacao) {
-        this.identificacao = identificacao;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 }
