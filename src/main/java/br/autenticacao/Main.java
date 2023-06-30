@@ -1,6 +1,6 @@
 package br.autenticacao;
 
-import br.autenticacao.controller.ManterPessoa;
+import br.autenticacao.controller.service.ManterPessoa;
 
 public class Main {
 
