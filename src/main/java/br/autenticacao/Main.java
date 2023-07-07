@@ -1,12 +1,12 @@
 package br.autenticacao;
 
-import br.autenticacao.controller.service.ManterPessoa;
+import br.autenticacao.controller.command.ManterPessoaCommand;
 
 public class Main {
 
     public static void main(String[] args) {
-        ManterPessoa pessoa = new ManterPessoa();
-        pessoa.manter();
+        ManterPessoaCommand command = new ManterPessoaCommand();
+        command.executar();
     }
 
 }

@@ -1,15 +1,15 @@
 package br.autenticacao.controller.service;
 
 import br.autenticacao.controller.out.GravarPessoaRepository;
-import br.autenticacao.view.LerPessoa;
+import br.autenticacao.view.OperacoesPessoa;
 import br.autenticacao.model.Pessoa;
 
-public class ManterPessoa {
+public class CadastrarPessoaService {
 
     private GravarPessoaRepository repository;
 
-    public void manter() {
-        var pessoa = new LerPessoa();
+    public void executar() {
+        var pessoa = new OperacoesPessoa();
         Pessoa pessoaInformada = pessoa.criarPessoa();
 
         repository = new GravarPessoaRepository();

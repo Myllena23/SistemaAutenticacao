@@ -19,4 +19,12 @@ public class GravarPessoaRepository {
         return pessoasSalvas.get(identificador);
     }
 
+    public Map<UUID, Pessoa> listarTodasPessoas() {
+        return pessoasSalvas;
+    }
+
+    public void excluirPessoa(UUID identificador) {
+
+    }
+
 }
