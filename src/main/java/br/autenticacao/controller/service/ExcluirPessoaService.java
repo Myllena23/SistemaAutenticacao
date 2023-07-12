@@ -6,7 +6,10 @@ public class ExcluirPessoaService {
 
     private GravarPessoaRepository repository;
 
-    public void executar() {
+    public void executar(Integer pessoa) {
+        repository = new GravarPessoaRepository();
+        repository.excluirPessoa(pessoa);
+
 
     }
 }

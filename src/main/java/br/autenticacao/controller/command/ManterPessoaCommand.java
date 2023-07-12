@@ -4,7 +4,10 @@ import br.autenticacao.controller.service.CadastrarPessoaService;
 import br.autenticacao.controller.service.ExcluirPessoaService;
 import br.autenticacao.controller.service.ListarPessoasService;
 import br.autenticacao.controller.service.LogarPessoaService;
+import br.autenticacao.model.Pessoa;
 import br.autenticacao.view.OperacoesPessoa;
+
+import java.util.List;
 
 public class ManterPessoaCommand {
 
@@ -17,12 +20,11 @@ public class ManterPessoaCommand {
         OperacoesPessoa operacoes = new OperacoesPessoa();
         Integer opcaoEscolhida = operacoes.exibeMenuInicial();
 
-        validaOpcaoEscolhida(opcaoEscolhida);
-
         switch (opcaoEscolhida) {
             case 1 -> {
                 cadastrarPessoa = new CadastrarPessoaService();
                 cadastrarPessoa.executar();
+                operacoes.exibeMenuInicial();
             }
             case 2 -> {
                 logarPessoa = new LogarPessoaService();
@@ -34,12 +36,14 @@ public class ManterPessoaCommand {
             }
             case 4 -> {
                 excluirPessoa = new ExcluirPessoaService();
-                excluirPessoa.executar();
+                listarPessoa = new ListarPessoasService();
+                List<Pessoa> pessoas = listarPessoa.executar();
+                operacoes.exibePessoasCadastradas(pessoas);
+                Integer pessoaSelecionada = operacoes.exibeMenuParaSelecionarPessoaASerExcluida();
+                excluirPessoa.executar(pessoaSelecionada);
             }
+            case 5 -> { }
         }
     }
 
-    private void validaOpcaoEscolhida(Integer opcaoEscolhida) {
-
-    }
 }

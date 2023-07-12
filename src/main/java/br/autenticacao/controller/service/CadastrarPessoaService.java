@@ -15,9 +15,8 @@ public class CadastrarPessoaService {
         repository = new GravarPessoaRepository();
         var identificacaoPessoa = repository.gravarPessoa(pessoaInformada);
 
-        var pessoaRecuperada = repository.recuperarPessoa(identificacaoPessoa);
-
-        System.out.println("Pessoa salva: " + pessoaRecuperada.toString());
+//        var pessoaRecuperada = repository.recuperarPessoa(identificacaoPessoa);
+//        System.out.println("Pessoa salva: " + pessoaRecuperada.toString());
 
         System.out.println("Obrigado!");
     }

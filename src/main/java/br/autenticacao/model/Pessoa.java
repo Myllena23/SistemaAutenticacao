@@ -3,19 +3,17 @@ package br.autenticacao.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Data
 @NoArgsConstructor
 public class Pessoa {
 
-    private UUID identificacao;
+    public static Integer identificacao = 0;
     private String nome;
     private String email;
     private String cpf;
 
     public Pessoa(String nome, String email, String cpf) {
-        this.identificacao = UUID.randomUUID();
+        Pessoa.identificacao++;
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;

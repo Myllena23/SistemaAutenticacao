@@ -2,28 +2,26 @@ package br.autenticacao.controller.out;
 
 import br.autenticacao.model.Pessoa;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class GravarPessoaRepository {
 
-    Map<UUID, Pessoa> pessoasSalvas = new HashMap<>();
+    List<Pessoa> pessoasSalvas = new ArrayList<>();
 
-    public UUID gravarPessoa(Pessoa pessoa) {
-        pessoasSalvas.put(pessoa.getIdentificacao(), pessoa);
-        return pessoa.getIdentificacao();
+    public Integer gravarPessoa(Pessoa pessoa) {
+        pessoasSalvas.add(pessoa);
+        return Pessoa.identificacao;
     }
 
-    public Pessoa recuperarPessoa(UUID identificador) {
+    public Pessoa recuperarPessoa(Integer identificador) {
         return pessoasSalvas.get(identificador);
     }
 
-    public Map<UUID, Pessoa> listarTodasPessoas() {
+    public List<Pessoa> listarTodasPessoas() {
         return pessoasSalvas;
     }
 
-    public void excluirPessoa(UUID identificador) {
+    public void excluirPessoa(Integer identificador) {
 
     }
 
