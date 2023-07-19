@@ -3,7 +3,9 @@ package br.autenticacao.controller.service;
 import br.autenticacao.controller.out.GravarPessoaRepository;
 import br.autenticacao.view.OperacoesPessoa;
 import br.autenticacao.model.Pessoa;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CadastrarPessoaService {
 
     private GravarPessoaRepository repository;
