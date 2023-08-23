@@ -6,11 +6,15 @@ import br.autenticacao.controller.service.ListarPessoasService;
 import br.autenticacao.controller.service.LogarPessoaService;
 import br.autenticacao.model.Pessoa;
 import br.autenticacao.view.OperacoesPessoa;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ManterPessoaCommand {
 
+    @Autowired
     private CadastrarPessoaService cadastrarPessoa;
     private ExcluirPessoaService excluirPessoa;
     private ListarPessoasService listarPessoa;
@@ -22,7 +26,6 @@ public class ManterPessoaCommand {
 
         switch (opcaoEscolhida) {
             case 1 -> {
-                cadastrarPessoa = new CadastrarPessoaService();
                 cadastrarPessoa.executar();
                 operacoes.exibeMenuInicial();
             }

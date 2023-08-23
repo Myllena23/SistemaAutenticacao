@@ -9,8 +9,8 @@ public class ExcluirPessoaService {
     private GravarPessoaRepository repository;
 
     public void executar(Integer pessoa) {
-        repository = new GravarPessoaRepository();
-        repository.excluirPessoa(pessoa);
+//        repository = new GravarPessoaRepository();
+//        repository.excluirPessoa(pessoa);
 
 
     }
