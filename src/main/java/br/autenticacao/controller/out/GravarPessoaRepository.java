@@ -12,9 +12,13 @@ public class GravarPessoaRepository {
     private PessoaJpaRepository pessoaJpaRepository;
 
 
-  //  List<Pessoa> pessoasSalvas = new ArrayList<>();
+    //  List<Pessoa> pessoasSalvas = new ArrayList<>();
     public Long gravarPessoa(Pessoa pessoa){
-        PessoaEntity pessoaEntity = new PessoaEntity(pessoa.getNome(), pessoa.getEmail(), pessoa.getCpf());
+        PessoaEntity pessoaEntity = PessoaEntity.builder()
+                .nome(pessoa.getNome())
+                .cpf(pessoa.getCpf())
+                .email(pessoa.getEmail())
+                .build();
         pessoaJpaRepository.save(pessoaEntity);
         return pessoaEntity.getId();
 
