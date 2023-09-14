@@ -26,7 +26,7 @@ public class ManterPessoaCommand {
 
         switch (opcaoEscolhida) {
             case 1 -> {
-                cadastrarPessoa.executar();
+//                cadastrarPessoa.executar();
                 operacoes.exibeMenuInicial();
             }
             case 2 -> {

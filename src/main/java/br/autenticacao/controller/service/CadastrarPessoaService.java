@@ -12,15 +12,11 @@ public class CadastrarPessoaService {
     @Autowired
     private GravarPessoaRepository repository;
 
-    public void executar() {
-        var pessoa = new OperacoesPessoa();
-        Pessoa pessoaInformada = pessoa.criarPessoa();
+    public void executar(Pessoa pessoa) {
+//        var pessoa = new OperacoesPessoa();
+//        Pessoa pessoaInformada = pessoa.criarPessoa();
 
-//        repository = new GravarPessoaRepository();
-        var identificacaoPessoa = repository.gravarPessoa(pessoaInformada);
-
-//        var pessoaRecuperada = repository.recuperarPessoa(identificacaoPessoa);
-//        System.out.println("Pessoa salva: " + pessoaRecuperada.toString());
+        var identificacaoPessoa = repository.gravarPessoa(pessoa);
 
         System.out.println("Obrigado!");
     }

@@ -9,10 +9,12 @@ import org.springframework.context.ApplicationContext;
 public class Main {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext =
-                SpringApplication.run(Main.class, args);
-        ManterPessoaCommand command = applicationContext.getBean(ManterPessoaCommand.class);
-        command.executar();
+        SpringApplication.run(Main.class, args);
+
+//        ApplicationContext applicationContext =
+//                SpringApplication.run(Main.class, args);
+//        ManterPessoaCommand command = applicationContext.getBean(ManterPessoaCommand.class);
+//        command.executar();
     }
 
 }
